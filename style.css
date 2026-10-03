@@ -1,0 +1,241 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Experience */
+#experience{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#experience-canvas{
+  width: 100%;
+  height: 100%;
+}
+
+/* Utilities */
+.hidden{
+  display: none;
+}
+
+/* Modal */
+.modal{
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: rgb(106, 33, 134);
+
+}
+.modal-title{
+  font-size: 1.6rem;
+}
+.modal-wrapper{
+  background-color: #eec4ead5;
+  padding: 20px;
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-project-description{
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+a{
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid rgb(106, 33, 134);
+  color: rgb(106, 33, 134);
+  width: 40%;
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 4px 10px;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+}
+
+a:hover,
+a:focus-visible{
+  color: white;
+  background-color: rgb(106, 33, 134);
+}
+
+a:active{
+  color: white;
+  background-color: rgb(106, 33, 134);
+  transform: scale(0.95);
+}
+
+button{
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 24px;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 10px;
+  background-color: rgb(106, 33, 134);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover,
+button:focus-visible{
+  color: rgb(106, 33, 134);
+  background-color: white;
+  border-color: rgb(106, 33, 134);
+}
+
+button:active{
+  color: rgb(106, 33, 134);
+  background-color: white;
+  border-color: rgb(106, 33, 134);
+  transform: scale(0.95);
+}
+
+#interaction-prompt {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 8px;
+  
+  font-family: sans-serif;
+  font-size: 14px;
+  
+  pointer-events: none;
+  z-index: 10;
+}
+
+#interaction-prompt.hidden {
+  display: none;
+}
+
+
+#mobile-controls {
+  display: none;
+}
+
+/* Only show controls on touch/mobile-sized screens */
+@media (max-width: 768px) {
+
+  #mobile-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 20;
+
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .mobile-middle-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .mobile-button {
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+
+    background: #eec4ead5;
+  color: rgb(106, 33, 134);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-button:active {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(0.95);
+  }
+}
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-content p {
+  margin: 0;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+#character-prompt {
+  position: fixed;
+  transform: translate(-50%, -130%);
+  z-index: 10;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  background: #eec4ead5;
+  color: rgb(106, 33, 134);
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+
+  pointer-events: none;
+  white-space: nowrap;
+
+  opacity: 1;
+  transition: opacity 3s ease-out;
+}
+
+#character-prompt.hidden {
+  opacity: 0;
+  pointer-events: auto;
+}

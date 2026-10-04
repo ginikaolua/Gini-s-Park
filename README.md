@@ -1,44 +1,88 @@
 # Gini's Park
 
+### An Interactive 3D Portfolio Experience
+
 An interactive 3D portfolio website built with Three.js, JavaScript, HTML, CSS, and Blender.
 
-## Live Demo
+[🌐 Live Demo](https://ginis-park.netlify.app)
 
-[View Gini's Park](https://ginis-park.netlify.app/)
+![Gini's Park](./images/hero.png)
+
+---
 
 ## About
 
-Gini's Park is an interactive 3D portfolio experience where visitors can explore a virtual environment, interact with objects, and discover my work and modelling rate card.
+Gini's Park is an interactive 3D portfolio experience where visitors can explore a virtual environment, control a character, interact with objects, and discover my modelling work.
+
+The project combines real-time 3D graphics with traditional web technologies to create an interactive portfolio experience.
+
+---
 
 ## Features
 
 - Interactive 3D environment
-- GLB model imported from Blender
 - Character movement
+- Gravity and jumping
+- Capsule-based character collision
+- Octree environment collision detection
+- Raycasting interactions
+- Proximity-based interaction prompts
+- Interactive HTML modal system
 - Keyboard controls
 - Mobile touch controls
-- Collision detection
-- Gravity and jumping
-- Raycasting interactions
-- Interactive modal system
 - Responsive camera
-- Loading screen
-- 3D-to-HTML character prompt
+- 3D-to-HTML UI positioning
+- GLB model integration
+- Blender-created 3D assets
+
+---
+
+## Experience
+
+### Explore the Environment
+
+The portfolio is presented as an explorable 3D environment rather than a traditional static website.
+
+![Gini's Park environment](./images/hero.png)
+
+### Interactive Environment
+
+Users can move around the environment and approach interactive objects to discover additional content.
+
+![Interactive environment](./images/interaction.png)
+
+### Interactive Portfolio Modal
+
+Interactive objects can trigger HTML-based interface elements containing portfolio and booking information.
+
+![Portfolio modal](./images/modal.png)
+
+### Mobile Experience
+
+The experience also supports mobile interaction through on-screen directional controls.
+
+![Mobile controls](./images/mobile.png)
+
+---
 
 ## Controls
 
 ### Desktop
 
-- `W` / `↑` — Move up
-- `S` / `↓` — Move down
-- `A` / `←` — Move left
-- `D` / `→` — Move right
-- `E` — Interact
-- `R` — Respawn
+| Key | Action |
+|---|---|
+| `W` / `↑` | Move up |
+| `S` / `↓` | Move down |
+| `A` / `←` | Move left |
+| `D` / `→` | Move right |
+| `E` | Interact |
+| `R` | Respawn |
 
 ### Mobile
 
-Use the on-screen directional controls.
+Use the on-screen directional controls to move around the environment.
+
+---
 
 ## Built With
 
@@ -49,20 +93,38 @@ Use the on-screen directional controls.
 - Blender
 - WebGL
 
+---
+
 ## What I Learned
 
-This project helped me learn how to:
+This project helped me gain practical experience with:
 
-- Load and work with GLB models in Three.js
-- Build a 3D scene and camera system
-- Implement character movement
-- Work with Capsule collision detection
-- Use an Octree for environment collisions
-- Implement gravity and jumping
-- Use Raycaster for 3D interactions
-- Connect DOM elements with a 3D scene
-- Create responsive 3D experiences
-- Handle desktop and mobile input
+- Loading and working with GLB models in Three.js
+- Building and configuring a 3D scene
+- Working with cameras, lighting, and rendering
+- Implementing character movement
+- Working with Capsule collision detection
+- Using an Octree for environment collisions
+- Implementing gravity and jumping
+- Using Raycaster for 3D interactions
+- Connecting DOM elements with a 3D scene
+- Converting 3D positions into screen coordinates
+- Handling desktop and mobile input
+- Building responsive 3D experiences
+
+---
+
+## Challenges
+
+Some of the main challenges I worked through during development included:
+
+- Implementing reliable character collision
+- Keeping the character movement and physics synchronized
+- Creating smooth character rotation
+- Making interactions work correctly on both desktop and mobile
+- Preventing clicks on non-interactive parts of the scene from triggering modals
+- Connecting the 3D environment with traditional HTML/CSS interface elements
+- Managing camera positioning while the character moves
 
 ## Author
 
